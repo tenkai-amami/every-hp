@@ -1,0 +1,19 @@
+# エディタ設定
+.vscode/
+.idea/
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+
+# ログファイル
+*.log
+
+# 一時ファイル
+*.tmp
+*.swp
+*~
+
+# Node.js（将来的に使用する可能性）
+node_modules/
+package-lock.json

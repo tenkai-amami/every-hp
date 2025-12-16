@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社every | 静かに、しなやかに。</title>
+    <link rel="icon" href="assets/images/logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+</head>
+
+<body>
+    <!-- Background Shapes (Parallax) -->
+    <!-- 大1, 中2, 小3 -->
+    <div class="background-shapes">
+        <!-- Large (Slow) -->
+        <div class="shape shape--large shape--1" data-speed="0.05"></div>
+
+        <!-- Medium (Normal) -->
+        <div class="shape shape--medium shape--2" data-speed="0.1"></div>
+        <div class="shape shape--medium shape--3" data-speed="0.12"></div>
+
+        <!-- Small (Fast) -->
+        <div class="shape shape--small shape--4" data-speed="0.2"></div>
+        <div class="shape shape--small shape--5" data-speed="0.25"></div>
+        <div class="shape shape--small shape--6" data-speed="0.3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="every">
+                </a>
+            </h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#concept">Concept</a></li>
+                    <li class="header__item"><a href="service.html">Service</a></li>
+                    <li class="header__item"><a href="about.html">Company</a></li>
+                    <li class="header__item"><a href="contact.html" class="btn btn--primary">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="header__hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="header__overlay"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__content">
+                <h2 class="hero__catch vertical-text">
+                    <span class="fade-in">しなやかに、</span><br>
+                    <span class="fade-in delay-1">前へ。</span>
+                </h2>
+            </div>
+        </section>
+
+        <!-- Concept Section -->
+        <section id="concept" class="concept">
+            <div class="container small">
+                <p class="concept__lead fade-in">
+                    everyは、しなやかに支える。<br>
+                    もっと自由に、もっと前に進めるように、<br>
+                    私たちは支え続ける。<br>
+                    柔らかく、けれど芯のあるサポートを。
+                </p>
+                <div class="concept__logo-mark">
+                    <!-- ロゴの一部をあしらいとして配置 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section news-section">
+            <div class="container small">
+                <h2 class="section-title fade-in">News</h2>
+                <div id="news-list" class="news-list fade-in delay-1">
+                    <!-- Loading Placeholder -->
+                    <p class="news-loading">お知らせを読み込んでいます...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- News Modal -->
+    <div id="news-modal" class="news-modal" aria-hidden="true">
+        <div class="news-modal__overlay"></div>
+        <div class="news-modal__content">
+            <button class="news-modal__close" aria-label="Close">&times;</button>
+            <div class="news-modal__header">
+                <span class="news-modal__date"></span>
+                <span class="news-modal__category"></span>
+                <h3 class="news-modal__title"></h3>
+            </div>
+            <div class="news-modal__body">
+                <!-- Content goes here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <small class="footer__copyright">&copy; every Inc. All Rights Reserved.</small>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js?v=2"></script>
+</body>
+
+</html>
