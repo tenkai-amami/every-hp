@@ -48,18 +48,21 @@
         </section>
 
         <div class="container fade-in delay-1">
-            <form class="contact-form" name="contact" method="POST" data-netlify="true" action="success.html">
+            <form class="contact-form" method="POST" action="https://formspree.io/f/xvgenyjq">
+                <input type="hidden" name="_next" value="https://every-every.com/success.html">
                 <div class="form-group">
                     <label class="form-label" for="name">お名前</label>
-                    <input type="text" id="name" name="name" class="form-input" placeholder="山田 太郎">
+                    <input type="text" id="name" name="name" class="form-input" placeholder="山田 太郎" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="email">メールアドレス</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="example@every.co.jp">
+                    <input type="email" id="email" name="email" class="form-input" placeholder="example@every.co.jp"
+                        required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="message">お問い合わせ内容</label>
-                    <textarea id="message" name="message" class="form-textarea" placeholder="ご質問やご相談はこちら"></textarea>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="ご質問やご相談はこちら"
+                        required></textarea>
                 </div>
                 <div class="form-submit">
                     <button type="submit" class="btn btn--primary btn--submit">送信する</button>
