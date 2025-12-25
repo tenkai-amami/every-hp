@@ -170,6 +170,8 @@ img {
     background-repeat: no-repeat;
     background-size: contain;
     will-change: transform;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
     opacity: 1;
 }
 

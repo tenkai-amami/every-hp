@@ -51,25 +51,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const shapes = document.querySelectorAll('.shape');
 
-    // Parallax Function (Scroll based)
-    const handleScroll = () => {
-        const currentScrollY = window.scrollY;
+    // Performance optimized scroll handling
+    let ticking = false;
+    let lastScrollY = 0;
 
-        // Note: Header hiding logic removed by request. Header stays visible.
-
-        // Parallax updates
+    // Parallax Function (Scroll based) - Optimized with requestAnimationFrame
+    const updateParallax = () => {
         shapes.forEach((shape) => {
             // Get speed from data attribute, default to 0.1
             const speed = parseFloat(shape.getAttribute('data-speed') || 0.1);
 
             // "Larger moves slower" or specific feels.
             // Move up against scroll to create depth
-            const yPos = currentScrollY * speed;
+            const yPos = lastScrollY * speed;
             shape.style.transform = `translateY(${yPos * -1}px)`;
         });
+        ticking = false;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+        lastScrollY = window.scrollY;
+
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     // Initial trigger
     handleScroll();
